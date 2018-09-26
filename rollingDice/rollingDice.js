@@ -7,11 +7,14 @@ function getRandomInt() {
 function rollDice(num) {
  var rolled = '';
  rolled = 'Rolled ' + num + ' dice: '
- for (var i = 0; i < num; i++) {
+ for (var i = 0; i < num -1; i++) {
    rolled += getRandomInt().toString();
    rolled = rolled + ", ";
  }
+ rolled += getRandomInt().toString();
  return rolled;
 }
+
+console.log(rollDice(myArgs));
 
 console.log(rollDice(myArgs));
